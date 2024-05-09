@@ -229,5 +229,41 @@ public class Main {
 }
 ```
 
+----------------------------------------------------------------------------------------------------
 
+<h3>ArrayList </h3>
+<h4>Main class code</h4>
 
+```bash
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Initialize an ArrayList to store the inputs
+        ArrayList<String> inputs = new ArrayList<String>();
+
+        // Add some inputs to the ArrayList
+        inputs.add("one");
+        inputs.add("two");
+        inputs.add("hi");
+        inputs.add("there");
+        inputs.add("a");
+
+        // Display each element within the ArrayList with 3 characters of padding
+        System.out.println("Updated ArrayList elements with padding:");
+        for (String input : inputs) {
+            System.out.printf("%-3s (length: %d)\n", input, input.length());
+        }
+
+        // Remove all elements that have a length less than or equal to 2
+        inputs.removeIf(input -> input.length() <= 2);
+
+        // Display the updated ArrayList elements along with the length of each element
+        System.out.println("\nUpdated ArrayList elements after removing short inputs:");
+        for (String input : inputs) {
+            System.out.printf("%-3s (length: %d)\n", input, input.length());
+        }
+    }
+}
+
+```
